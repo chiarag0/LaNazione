@@ -112,8 +112,7 @@ nav {
     border-left: 2px solid lightgray;
 }
 
-.navbar1 li:last-child a:hover  {
-    background-color: #eee;
+.navbar1 li:nth-child(5) a:hover  {
     color: rgba(0, 90, 200, 0.8);
 }
 
@@ -184,7 +183,6 @@ nav {
 }
 
 .navbar2 li:not(:first-child):not(:last-child) a:hover  {
-    background-color: #eee;
     color: rgba(0, 90, 200, 0.8);
 }
 
@@ -204,12 +202,11 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;     /*inherit???*/
+    width: 80%;
 }
 
 
 .navbar3 li a:hover  {
-    background-color: #eee;
     color: rgba(0, 90, 200, 0.8);
 }
 
@@ -260,11 +257,13 @@ nav {
     justify-content: space-between;
     border-bottom: #505050;
     padding: 20px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }
 
 
 
-h1 {
+.container h1 {
     font-family: 'Roboto Condensed', sans-serif;
     color: #005ac7;
     font-weight: 700;
@@ -287,7 +286,8 @@ h1 {
 
 
 .article1 h3 {
-    font-family: serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
     display: block;
     font-size: 16px;
     color: #505050;
@@ -299,8 +299,7 @@ h1 {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
-    border-bottom: #505050;
-    border: 1px;
+    border-bottom: 1px solid lightgray;
     padding: 20px;
 }
 .firstSection {
@@ -308,8 +307,7 @@ h1 {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
-    border-bottom: #505050;
-    border: 1px;
+
 }
 
 .secondSection {
@@ -317,29 +315,28 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    border-bottom: #505050;
+    padding-left: 7px;
+
 }
 
 .article2 {
-    border-right: #505050;
-    border: 1px;
-    padding-right: 14px;
+    border-right: 1px solid lightgray;
+    padding-right: 7px;
     padding-bottom: 15px;
     margin-bottom: 15px;
 
 }
 
 .article3 {
-    border-right: #505050;
-    border: 1px;
-    padding-right: 14px;
+    border-right: 1px solid lightgray;
+    padding-left: 14px;
+    padding-right: 7px;
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
 
 .article4 {
-    border-bottom: #505050;
-    border: 1px;
+    border-bottom: 1px solid lightgray;
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
@@ -363,9 +360,10 @@ h1 {
     line-height: 24px;
     margin: 8px;
     font-family: 'Roboto Condensed', sans-serif;
+    color: #505050;
 }
 
-.containerArticle2 h4 {
+h4 {
     font-size: 14px;
     line-height: 24px;
     margin: 8px;
@@ -377,3 +375,235 @@ h1 {
 .containerArticle2 h2:hover {
     color: #525252;
 }
+
+
+
+.containerArticle3 {
+    height: 215px;
+    width: 992px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.containerArticle3 h1{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.containerArticle3 h2{
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.containerArticle3 h3 {
+    font-size: 20px;
+    line-height: 24px;
+}
+.containerArticle3 h4{
+    margin-left: -2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    margin: 0;
+    width: 100%;
+    background-color: #005ac8;
+}
+
+.footer-container {
+    width: 100%;
+    margin-left: 162px;
+    margin-right: 162px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.qn-logo{
+    width: 168px;
+    height: 100%;
+}
+
+
+
+
+.qn-logo img{
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ln-logo img {
+    width: 280px;
+}
+
+
+.footer-main{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-main p{
+    padding-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #e8f2ff;
+
+}
+
+.footer-others{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 36px;
+    width: 500px;
+}
+
+.footer-others svg {
+    height: 15px;
+    padding-right: 15px;
+    opacity: 25%;
+}
+
+.line {
+    width: 450px;
+    height: 15px;
+}
+
+
+
+.footer-links{
+    display: flex;
+    flex-direction: row;
+}
+
+.f-column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 30px;
+    padding-top: 45px;
+
+    /* padding-left: 30px;
+
+    padding-bottom: 10px;*/
+
+}
+
+.footer-links a{
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links h1{
+    font-family: Arial, sans-serif;
+    color: rgb(137, 168, 207);
+    text-transform: uppercase;
+    font-size: 12px;
+
+
+}
+
+
+
+.footer-bottom{
+    background-color: #0250b0 ;
+    width: 100%;
+    margin: 0;
+    font-size: 11px;
+    padding: 10px 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .ad-container1{
+        display: none;
+    }
+    .image-container1{
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+    .navbar1 {
+        background-color: #005ac7;
+        border: 1px solid #0250b0;
+        height: 37px;
+
+    }
+    .navbar1 li a {
+        color: #fff;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .navbar1 li:nth-child(5) a{
+        color: #fff;
+        border-left: 2px solid #0250b0;
+        padding-left: 10px;
+    }
+    .navbar1 li:first-child{
+        display: none;
+        padding-right: 10px;
+    }
+    .navbar1 li:nth-child(2){
+        display: none;
+    }
+    .navbar1 li:last-child{
+        display: none;
+    }
+
+    .image-container2{
+        display: none;
+    }
+
+
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {...}
+
