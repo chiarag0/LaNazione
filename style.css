@@ -56,12 +56,15 @@
 
 .ad-container2{
     text-align: center;
-    margin: 0 auto;
+    height: 250px;
+    width: 990px;
+    padding: 6px 6px 24px 6px;
+    margin: 0 11px;
 }
 
 
-ad2 {
-    width: 150%;
+#ad2 {
+    width: 100%;
 }
 
 
@@ -69,7 +72,6 @@ nav {
     background-color: #fff;
     height: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 1200px; /* set a max width to prevent the nav from becoming too wide */
@@ -78,10 +80,22 @@ nav {
     border-left: none;
     border-right: none;
  }
+
+.mobile-nav-bar {
+    background-color: #005ac7;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#mobile-logo {
+    width: 210px;
+    height: 40px;
+}
+
 .navbar1 {
     background-color: #fff;
     height: 50px;
-    align-items: center;
+
 }
 
 .navbar1 ul {
@@ -136,21 +150,19 @@ nav {
     color: #fff;
 }
 
-*************************************************************
+/*************************************************************/
 
-.navbar2 {
-    background-color: #fff;
-    height: 50px;
-    align-items: center;
-}
 
-.navbar2 ul {
+
+.navbar2  {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 12px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    background-color: #fff;
+    height: 50px;
+    align-items: flex-start;
     width: inherit;
 }
 
@@ -158,10 +170,22 @@ nav {
     display: inline-block;
 }
 
-.navbar2 li:first-child {
-    transform: translateX(50%);
+
+.navbar-brand {
+    width: 10%;
+    padding-left: 10px;
 }
 
+.navbar-container li {
+    padding: 0 10px;
+}
+
+.navbar2 .navbar-brand a {
+   color: #db0049;
+}
+
+
+/*
 .navbar2 li:nth-child(2) {
     flex-grow: 0.10;
     transform: translateX(-35%);
@@ -176,9 +200,9 @@ nav {
     padding-right: 150px;
 }
 
+*/
 
-
-.navbar2 li a {
+.navbar2 a {
     color: #313131;
     text-decoration: none;
     font-weight: bold;
@@ -191,12 +215,14 @@ nav {
 }
 
 
-***********************************************
+/***********************************************/
 
 .navbar3 {
     background-color: #fff;
     height: 50px;
     align-items: center;
+    justify-content: center;
+
 }
 
 .navbar3 ul {
@@ -226,7 +252,7 @@ nav {
 }
 
 
-*********************************************************
+/*********************************************************/
 
 
 
@@ -756,11 +782,13 @@ footer {
         color: #fff;
         padding-top: 8px;
         padding-bottom: 8px;
+
     }
     .navbar1 li:nth-child(5) a{
         color: #fff;
         border-left: 2px solid #0250b0;
         padding-left: 10px;
+        padding-right: 20px;
     }
     .navbar1 li:first-child{
         display: none;
@@ -769,6 +797,11 @@ footer {
     .navbar1 li:nth-child(2){
         display: none;
     }
+
+    .navbar1 li:nth-child(3){
+        padding-left: 20px;
+    }
+
     .navbar1 li:last-child{
         display: none;
     }
@@ -781,6 +814,21 @@ footer {
         width: 70%;
     }
 
+
+    .navbar2 {
+        background-color: #e9f3ff;
+    }
+    .navbar2-brand {
+        position: absolute;
+        left: 20px;
+    }
+
+    .navbar-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
 }
 
 
@@ -791,6 +839,10 @@ footer {
 /* Medium devices (landscape tablets, 768px and up)
 @media only screen and (min-width: 768px) {...}
 
-/* Large devices (laptops/desktops, 992px and up)
-@media only screen and (min-width: 992px) {...}
+ Large devices (laptops/desktops, 992px and up)*/
+@media only screen and (min-width: 992px) {
+    .mobile-nav-bar {
+        display: none;
+    }
+}
 
