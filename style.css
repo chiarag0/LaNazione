@@ -1,3 +1,7 @@
+html{
+    overflow-x :hidden;
+}
+
 .logo {
     display: block;
     margin: auto;
@@ -24,6 +28,7 @@
 
 body {
     width: 100%;
+    overflow-x :hidden;
 }
 
 .container{
@@ -218,7 +223,7 @@ nav {
 }
 
 .navbar2 li:not(:first-child):not(:last-child) a:hover  {
-    color: rgba(0, 90, 200, 0.8);
+    color: 	#005AC6;
 }
 
 
@@ -293,7 +298,7 @@ nav {
     align-items: flex-start;
     justify-content: space-between;
     border-bottom: #505050;
-    padding: 20px 0px;
+    padding: 20px 0;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
@@ -706,7 +711,7 @@ footer {
 
 .footer-links h1{
     font-family: Arial, sans-serif;
-    color: rgb(137, 168, 207);
+    color: #89a8cf;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: -0.5px;
@@ -766,7 +771,16 @@ footer {
 }
 
 
-
+h5 {
+    font-family: Arial, sans-serif;
+    color: #89a8cf;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    margin: 0;
+    font-weight: bolder;
+    padding: 3px 0;
+}
 
 
 
@@ -781,13 +795,7 @@ footer {
         box-sizing: border-box;
     }
 
-    body {
-        width: 100%;
-    }
 
-    .vsc-initialized {
-        width: 100%;
-    }
 
 
     .ad-container1{
@@ -835,27 +843,25 @@ footer {
         display: none;
     }
 
-
-
     .navbar2 {
         background-color: #e9f3ff;
         width: 100%;
-        overflow-x: scroll;
     }
     .navbar-brand {
         position: absolute;
         width: 65px;
     }
 
-    .navbar-brand a {
+    .navbar2 .navbar-brand a {
         color: #005ac7;
     }
 
     .navbar-container {
         display: flex;
         scroll-behavior: smooth;
-        margin-left: 75px;
         overflow-x: scroll;
+        margin-left: 75px;
+
     }
 
     .navbar-container a {
@@ -873,7 +879,29 @@ footer {
         padding: 0;
         list-style: none;
         width: 100%;
-        overflow-x: hidden;
+    }
+
+    .navbar3 {
+        display: flex;
+        scroll-behavior: smooth;
+        overflow-x: scroll;
+    }
+
+    .navbar3 ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        padding: 0 0 0 120px;
+        list-style: none;
+        width: 100%;
+
+        margin-bottom: 5px;
+    }
+
+    .navbar3 li {
+        padding: 0 10px;
     }
 
 
@@ -935,6 +963,16 @@ footer {
         border: 0;
     }
 
+    .first-section .small-article{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .second-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .small-article{
         border: 0;
         height: 470px;
@@ -994,8 +1032,8 @@ footer {
 
 
     .special-container{
-        width: 95%;
-        padding-right: 3px;
+        width: 100%;
+        margin: 10px auto;
     }
 
     #s-left-article{
@@ -1026,8 +1064,22 @@ footer {
 
 
     .sidecar-right{
-
         width: 100%;
+        padding-left: 0;
+    }
+
+    .right-article{
+        margin: 0;
+        border: 0;
+        padding-bottom: 0;
+    }
+
+    .ad-container3 {
+        display: none;
+    }
+
+    .sidecar-right .right-article .small-article {
+        height: min-content;
     }
 
     .footer-container {
@@ -1046,17 +1098,49 @@ footer {
 
     .line {
         width: 100%;
+        align-content: space-between;
     }
 
     .footer-main {
-        width:100%;
+        width: 100%;
+        padding: 0 20px;
     }
 
     .footer-main svg {
         padding: 0;
         margin: 0;
-        width: 100%;
+        width: 45%;
     }
+
+    .footer-others {
+        width: 100%;
+        height: min-content;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    .mobile-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: min-content;
+        padding: 30px 20px;
+    }
+
+
+
+    hr {
+        border:0;
+        border-top: 1px solid #89a8cf;
+        width: 100%;
+        opacity: 0.66;
+    }
+
+
 }
 
 
@@ -1070,6 +1154,9 @@ footer {
  Large devices (laptops/desktops, 992px and up)*/
 @media only screen and (min-width: 601px) {
     .mobile-nav-bar {
+        display: none;
+    }
+    .mobile-links {
         display: none;
     }
 }
