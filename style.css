@@ -1,5 +1,6 @@
 html{
     overflow-x :hidden;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -29,6 +30,7 @@ html{
 body {
     width: 100%;
     overflow-x :hidden;
+    margin: 0;
 }
 
 .container{
@@ -359,6 +361,7 @@ nav {
     justify-content: space-evenly;
     border-bottom: 1px solid lightgray;
     padding: 20px;
+    width: 100%;
 }
 .first-section {
     display: flex;
@@ -381,11 +384,14 @@ nav {
 
 .small-article {
     padding-left: 14px;
-    padding-right: 7px;
+    padding-right: 14px;
     padding-bottom: 15px;
     margin-bottom: 15px;
     height: 509px;
+}
 
+.small-article img {
+    width: 100%;
 }
 
 #left-article {
@@ -616,12 +622,10 @@ footer {
 
 .footer-container {
     width: 100%;
-    margin-left: 162px;
-    margin-right: 162px;
+    padding-left: 12.5%;
     display: flex;
     flex-wrap: wrap;
-
-
+    box-sizing: border-box;
 }
 
 .qn-logo{
@@ -640,13 +644,14 @@ footer {
 
 
 .ln-logo img {
-    width: 280px;
+    width: 38.46%;
 }
 
 
 .footer-main{
     padding-top: 30px;
     padding-bottom: 40px;
+    width: 41%;
 }
 
 .footer-main p{
@@ -661,8 +666,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 36px;
-    width: 500px;
+    flex-wrap: nowrap;
+    height: min-content;
+    width: 38.46%;
 }
 
 .footer-others svg {
@@ -672,8 +678,9 @@ footer {
 }
 
 .line {
-    width: 450px;
-    height: 15px;
+    white-space: nowrap;
+    width: min-content;
+    max-height: min-content;
 }
 
 
@@ -689,10 +696,6 @@ footer {
     align-items: flex-start;
     padding-right: 30px;
     padding-top: 45px;
-
-    /* padding-left: 30px;
-
-    padding-bottom: 10px;*/
 
 }
 
@@ -723,22 +726,23 @@ footer {
     background-color: #0250b0 ;
     height: 35px;
     width: 100%;
+    align-items: center;
+    display: flex;
 }
 
 .footer-bottom{
     display: flex;
     flex-direction: row;
-    padding: 10px 20px;
-    width: 1024px;
+    width: 100%;
     height: 15px;
-    margin-left: 162.5px;
-    margin-right: 162.5px;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
     font-size: 11px;
     color: #fff;
     font-family: Arial, sans-serif;
     justify-content: space-between;
     align-items: center;
-
+    box-sizing: border-box;
 }
 
 .footer-bottom p {
@@ -788,8 +792,8 @@ h5 {
 
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 767px and down) */
+@media only screen and (max-width: 767px) {
 
     * {
         box-sizing: border-box;
@@ -930,6 +934,10 @@ h5 {
         order: 2;
     }
 
+    .wide-article h2 {
+        font-size: 27px;
+        line-height: 36px;
+    }
 
     .articles-container{
         box-sizing: border-box;
@@ -975,15 +983,32 @@ h5 {
 
     .small-article{
         border: 0;
-        height: 470px;
+        height: min-content;
         border-bottom: 1px solid lightgray;
         align-items: center;
-        padding-right: 7px;
-        padding-left: 10px;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .small-article h2 {
+        font-size: 22px;
+        line-height: 26px;
+        padding-bottom: 0;
+    }
+
+    .small-article h3 {
+        font-size: 17px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+
+    .small-article h4 {
+        margin-bottom: 0;
     }
 
     #right-article{
-        padding-bottom: 25px;
+        margin-bottom: 25px;
     }
 
     .small-article img{
@@ -995,6 +1020,10 @@ h5 {
         padding: 0;
     }
 
+    .side-article h2 {
+        font-size: 22px;
+        line-height: 26px;
+    }
     .side-article h4 {
         margin-bottom: 0;
     }
@@ -1038,6 +1067,7 @@ h5 {
 
     #s-left-article{
         border-right: 0;
+        padding-right: 0;
     }
 
     .special-container .small-article {
@@ -1056,7 +1086,6 @@ h5 {
         border: 0;
         padding-top: 0;
         padding-bottom: 0;
-        padding-left: 10px;
         height: 215px;
         align-items: center;
         margin-bottom: 0;
@@ -1084,6 +1113,7 @@ h5 {
 
     .footer-container {
         margin: 0;
+        padding-left: 0;
     }
 
     .footer{
@@ -1100,6 +1130,13 @@ h5 {
         width: 100%;
         align-content: space-between;
     }
+
+    .row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
 
     .footer-main {
         width: 100%;
@@ -1131,7 +1168,9 @@ h5 {
         padding: 30px 20px;
     }
 
-
+    .row .img {
+        width: 24px;
+    }
 
     hr {
         border:0;
@@ -1140,6 +1179,32 @@ h5 {
         opacity: 0.66;
     }
 
+    .end-footer {
+        height: min-content;
+    }
+
+    .footer-bottom {
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .footer-bottom p {
+        width: 100%;
+        padding-top: 5px;
+
+    }
+
+    .bottom-links {
+        width: 100%;
+    }
+
+    .bottom-links a {
+        padding: 0 10px 5px 0;
+    }
 
 }
 
@@ -1151,8 +1216,65 @@ h5 {
 /* Medium devices (landscape tablets, 768px and up)
 @media only screen and (min-width: 768px) {...}
 
- Large devices (laptops/desktops, 992px and up)*/
-@media only screen and (min-width: 601px) {
+//////// 995!!!! ///////////
+
+ */
+
+/* Medium devices (tablets and large phones, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1029px) {
+    .navbar2 {
+        display: none;
+    }
+
+    .mobile-nav-bar {
+        display: none;
+    }
+
+    .wide-article-container {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+    .first-section {
+        width: 65%;
+    }
+    .second-section {
+        width: 28%;
+    }
+
+    .small-article {
+        width: 50%;
+    }
+
+
+    .sidecar-left {
+        width: 60%;
+    }
+
+    .sidecar-right {
+        width: 35%;
+        padding-right: 15px;
+    }
+
+    .sidecar-article {
+        height: min-content;
+    }
+
+    .sidecar-article .small-article {
+        height: min-content;
+    }
+
+    .sidecar-article .small-image {
+        height: min-content;
+    }
+
+    .mobile-links {
+        display: none;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 1030px and up)*/
+@media only screen and (min-width: 1030px) {
     .mobile-nav-bar {
         display: none;
     }
