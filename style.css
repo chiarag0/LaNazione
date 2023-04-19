@@ -69,7 +69,6 @@ body {
     height: 3%;
     width: 100%;
     padding: 6px 6px 24px 6px;
-
 }
 
 
@@ -347,7 +346,7 @@ nav {
     margin-right: 30px;
     font-size: 20px;
     line-height: 24px;
-
+    width: 100%;
 }
 
 .wide-article h4{
@@ -402,7 +401,9 @@ nav {
     border-bottom: 1px solid lightgray;
     padding-bottom: 15px;
     margin-bottom: 15px;
+    width: 90%;
 }
+
 
 #bottom-side-article{
     border-bottom: 0;
@@ -508,12 +509,18 @@ h4 {
     background-color: #e5effb;
     display: flex;
     flex-direction: column;
-    width: 615px;
-
+    width: 95%;
+    height: min-content;
 }
 
 #s-first-section{
     border-right: 0;
+    width: 100%;
+}
+
+#s-first-section .small-article {
+    width: 50%;
+    height: min-content;
 }
 
 #s-left-article {
@@ -549,11 +556,11 @@ h4 {
 }
 
 #bottom-s-a {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 15px;
-    height: 75px;
+    padding: 15px 0 10px 0;
+    height: min-content;
     border-top: 1px solid lightgray;
+    width: 100%;
+    margin-bottom: 0;
 }
 
 .sidecar-right {
@@ -652,6 +659,7 @@ footer {
     padding-top: 30px;
     padding-bottom: 40px;
     width: 41%;
+    padding-right: 15px;
 }
 
 .footer-main p{
@@ -1020,6 +1028,10 @@ h5 {
         padding: 0;
     }
 
+    .side-article {
+        width: 100%;
+    }
+
     .side-article h2 {
         font-size: 22px;
         line-height: 26px;
@@ -1125,6 +1137,13 @@ h5 {
         margin: 0;
     }
 
+    .nl-logo {
+        height: min-content;
+    }
+
+    #fLogo2 {
+        height: 3%;
+    }
 
     .line {
         width: 100%;
@@ -1221,7 +1240,7 @@ h5 {
  */
 
 /* Medium devices (tablets and large phones, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 1029px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .navbar2 {
         display: none;
     }
@@ -1255,6 +1274,21 @@ h5 {
         padding-right: 15px;
     }
 
+    .ad-container3 {
+        width: 95%;
+    }
+    #ad3 {
+        width: 100%;
+    }
+
+    .right-article {
+        width: 95%;
+    }
+
+    .small-image img{
+        width: 100%;
+    }
+
     .sidecar-article {
         height: min-content;
     }
@@ -1267,14 +1301,38 @@ h5 {
         height: min-content;
     }
 
+    .image-container3 img {
+        width: 100%;
+    }
+
+    .right-article .small-article {
+        width: 100%;
+        height: min-content;
+    }
+
     .mobile-links {
         display: none;
     }
+
+    .footer-main {
+        padding-bottom: 20px;
+    }
+
+    .footer-links {
+        margin-left: 20%;
+        align-items: flex-start;
+        padding-bottom: 20px;
+    }
+
+    .f-column {
+        padding-top: 0;
+    }
+
 }
 
 
-/* Large devices (laptops/desktops, 1030px and up)*/
-@media only screen and (min-width: 1030px) {
+/* Large devices (laptops/desktops, 1024px and up)*/
+@media only screen and (min-width: 1024px) {
     .mobile-nav-bar {
         display: none;
     }
