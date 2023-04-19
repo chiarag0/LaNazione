@@ -1241,9 +1241,6 @@ h5 {
 
 /* Medium devices (tablets and large phones, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .navbar2 {
-        display: none;
-    }
 
     .mobile-nav-bar {
         display: none;
