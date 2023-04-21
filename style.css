@@ -13,6 +13,18 @@ html{
     padding: 5px;
 }
 
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    justify-content: space-around;
+}
+.fixed-nav ul{
+    max-width: 1010px !important;
+    margin: 0 auto !important;
+}
+
 .logo2 {
     display: block;
     margin: auto;
@@ -130,17 +142,26 @@ nav {
     flex-grow: 8;
 }
 
-.navbar1 li:nth-child(4) {
+.navbar1 #first-logo {
+    display: none;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar1 li:nth-child(5) {
     margin-right: 10px;
 }
 
-.navbar1 li:nth-child(5) a {
+.navbar1 li:nth-child(6) a {
     color: #0250b0;
     padding-left: 10px;
     border-left: 2px solid lightgray;
 }
 
-.navbar1 li:nth-child(5) a:hover  {
+.navbar1 li:nth-child(6) a:hover  {
     color: rgba(0, 90, 200, 0.8);
 }
 
@@ -153,6 +174,8 @@ nav {
     font-family: sans-serif;
     transition: color 0.2s ease-in-out;
 }
+
+
 
 
 .active {
@@ -562,6 +585,7 @@ h4 {
     padding-top: 20px;
     display: block;
     line-height: 1.2em;
+    z-index: -1;
     color: #000;
     font-size: 20px;
     letter-spacing: -0.5px;
@@ -793,6 +817,11 @@ h5 {
         position: fixed;
         top: 0;
     }
+
+     .navbar1 #first-logo {
+        display: none;
+     }
+
     .mobile-nav-bar {
         position: fixed;
         top: 37px;
@@ -828,7 +857,7 @@ h5 {
         padding-bottom: 8px;
 
     }
-    .navbar1 li:nth-child(5) a{
+    .navbar1 li:nth-child(6) a{
         color: #fff;
         border-left: 2px solid #0250b0;
         padding-left: 10px;

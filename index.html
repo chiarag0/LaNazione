@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
 </head>
 
 <body>
@@ -28,6 +29,7 @@
         <li> <a href="#"><img src="https://img.icons8.com/ios/25/525252/menu-rounded.png"> </a></li>
         <li> <a href="#"><img src="https://img.icons8.com/ios-glyphs/25/525252/search--v1.png"> </a></li>
         <li> <a href="#" style="flex-grow: 8">Acquista il giornale</a></li>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Te-nVvtqStulot6ED3Sezjtfy3CkjZgW2Xi6Ie81&s" alt="Logo" id="first-logo">
         <li> <a href="#">Accedi</a></li>
         <li> <a href="#">Abbonati</a></li>
         <li> <a href="#"><img src="https://img.icons8.com/ios-glyphs/25/db0049/circled-right-2.png"></a></li>
@@ -282,7 +284,7 @@
   </div>
 
 </div>
-</body>
+
 
 
 
@@ -370,3 +372,32 @@
   </div>
 
 </footer>
+</body>
+
+<script>
+const nav = document.querySelector(".navbar1");
+
+document.addEventListener("scroll",  ()=> {
+  console.log(document.documentElement.scrollTop)
+  if(document.documentElement.scrollTop >= 240){
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      nav.classList.add("fixed-nav")
+      document.getElementById("first-logo").style.display = "block";
+    }
+  }
+  else{
+    nav.classList.remove("fixed-nav")
+    document.getElementById("first-logo").style.display = "none";
+  }
+});
+
+window.addEventListener("resize", function() {
+  if (window.innerWidth < 768) {
+    nav.classList.remove("fixed-nav")
+    document.getElementById("first-logo").style.display = "none";
+  }
+});
+
+
+
+</script>
